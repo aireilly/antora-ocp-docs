@@ -22,12 +22,28 @@ Based on https://github.com/stackrox/docs-tools/
    git add .
    git commit -am 'Docs init'
    ```
+1. Install Antora:
+   ```bash
+   npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
+   ```
+
 1. Run the Antora build:
 
    ```bash
    npx antora --fetch playbook.yml
    ```
 
+1. Install the http-server package globally using npm:
+
+   ```bash
+   npm i -g http-server
+   ```
+
+1. Serve the site locally:
+
+   ```bash
+   http-server build/site -c-1
+   ```
 
 To do:
 1. ~~Use the `patch-files` script to patch xrefs in the generated files.~~
